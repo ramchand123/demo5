@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>in.co.hpcinfo.www</groupId>
+  <artifactId>hpcinfo</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+  <name>hpcinfo</name>
+  <url>http://maven.apache.org</url>
+  <scm>
+     <connection>scm:svn:http://localhost/xyz/irctc/tags/hpcinfo-1.0</connection>
+	 <developerConnection>scm:svn:http://localhost/xyz/irctc/tags/hpcinfo-1.0</developerConnection>
+	 <url>http://localhost/xyz/irctc/tags/hpcinfo-1.0</url>
+  </scm>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+      <dependency>
+           <groupId>org.slf4j</groupId>
+           <artifactId>slf4j-simple</artifactId>
+           <version>1.7.22</version>
+      </dependency>
+            <!-- this is for junit dependency -->
+      <dependency>
+               <groupId>junit</groupId>
+               <artifactId>junit</artifactId>
+               <version>3.8.1</version>
+               <scope>test</scope>
+      </dependency>
+  </dependencies>
+  <build>
+      <plugins>
+	     <plugin>
+		      <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-release-plugin</artifactId>
+              <version>2.5.3</version>
+		 </plugin>
+	  </plugins>
+  </build>	  
+  <distributionManagement>
+     <repository>
+	     <id>central</id>
+		 <name>chandu-release</name>
+		 <url>http://localhost:8081/artifactory/ext-release-local</url>
+	 </repository>
+  </distributionManagement>	 
+</project>
